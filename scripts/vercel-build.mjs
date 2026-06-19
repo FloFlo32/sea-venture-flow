@@ -16,12 +16,15 @@ fs.mkdirSync(path.join(outputDir, 'functions', 'index.func'), { recursive: true 
 // Copy static client assets
 copyDir(path.join(root, 'dist', 'client'), path.join(outputDir, 'static'));
 
-// Copy built server into the edge function directory
-copyDir(path.join(root, 'dist', 'server'), path.join(outputDir, 'functions', 'index.func'));
+// Copy built server into the edge function directory.
+// With noExternal+inlineDynamicImports the build produces a single server.js.
+const serverSrc = path.join(root, 'dist', 'server');
+const funcDir = path.join(outputDir, 'functions', 'index.func');
+copyDir(serverSrc, funcDir);
 
 // Edge function entry point — adapts the Web Fetch export to Vercel edge handler
 fs.writeFileSync(
-  path.join(outputDir, 'functions', 'index.func', 'index.js'),
+  path.join(funcDir, 'index.js'),
   `import server from './server.js';
 export default async function handler(request) {
   return server.fetch(request, {}, {});

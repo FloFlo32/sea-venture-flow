@@ -24,6 +24,21 @@ export default defineConfig({
       '@tanstack/query-core',
     ],
   },
+  // Bundle all node_modules into the SSR output so the Edge Function is self-contained
+  environments: {
+    ssr: {
+      resolve: {
+        noExternal: true,
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            inlineDynamicImports: true,
+          },
+        },
+      },
+    },
+  },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-dom/client', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
     ignoreOutdatedRequests: true,
