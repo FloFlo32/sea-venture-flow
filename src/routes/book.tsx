@@ -12,7 +12,7 @@ const search = z.object({
 });
 
 export const Route = createFileRoute("/book")({
-  validateSearch: search,
+  validateSearch: (s) => search.parse(s),
   head: () => ({
     meta: [
       { title: "Book Your Tour — Aruba Bob" },

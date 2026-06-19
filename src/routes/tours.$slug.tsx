@@ -30,7 +30,8 @@ export const Route = createFileRoute("/tours/$slug")({
 });
 
 function TourDetail() {
-  const { tour } = Route.useLoaderData();
+  const { slug } = Route.useParams();
+  const tour = getTour(slug)!;
   const [active, setActive] = useState(0);
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
