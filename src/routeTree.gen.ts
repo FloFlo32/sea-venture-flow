@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ToursRouteImport } from './routes/tours'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -23,6 +24,11 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 const ToursRoute = ToursRouteImport.update({
   id: '/tours',
   path: '/tours',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tours': typeof ToursRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/tours/$slug': typeof ToursSlugRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tours': typeof ToursRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/tours/$slug': typeof ToursSlugRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tours': typeof ToursRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/tours/$slug': typeof ToursSlugRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/reviews'
+    | '/sitemap.xml'
     | '/tours'
     | '/blog/$slug'
     | '/tours/$slug'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/reviews'
+    | '/sitemap.xml'
     | '/tours'
     | '/blog/$slug'
     | '/tours/$slug'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/reviews'
+    | '/sitemap.xml'
     | '/tours'
     | '/blog/$slug'
     | '/tours/$slug'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   ReviewsRoute: typeof ReviewsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ToursRoute: typeof ToursRouteWithChildren
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       path: '/tours'
       fullPath: '/tours'
       preLoaderRoute: typeof ToursRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reviews': {
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   ReviewsRoute: ReviewsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   ToursRoute: ToursRouteWithChildren,
 }
 export const routeTree = rootRouteImport
