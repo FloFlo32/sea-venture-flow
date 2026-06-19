@@ -5,21 +5,21 @@ import { getTour, tours } from "@/lib/tours";
 
 export const Route = createFileRoute("/tours/$slug")({
   loader: ({ params }) => {
-    const tour = getTour(params.slug);
-    if (!tour) throw notFound();
-    return { tour };
+    if (!getTour(params.slug)) throw notFound();
   },
-  head: ({ loaderData }) => ({
-    meta: loaderData
-      ? [
-          { title: `${loaderData.tour.title} — Aruba Bob` },
-          { name: "description", content: loaderData.tour.shortDescription },
-          { property: "og:title", content: loaderData.tour.title },
-          { property: "og:description", content: loaderData.tour.shortDescription },
-          { property: "og:image", content: loaderData.tour.image },
-        ]
-      : [],
-  }),
+  head: ({ params }) => {
+    const t = params?.slug ? getTour(params.slug) : undefined;
+    if (!t) return {};
+    return {
+      meta: [
+        { title: `${t.title} — Aruba Bob` },
+        { name: "description", content: t.shortDescription },
+        { property: "og:title", content: t.title },
+        { property: "og:description", content: t.shortDescription },
+        { property: "og:image", content: t.image },
+      ],
+    };
+  },
   component: TourDetail,
   notFoundComponent: () => (
     <div className="container-tight py-24 text-center">
