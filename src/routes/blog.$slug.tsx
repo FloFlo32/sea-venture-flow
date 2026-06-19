@@ -4,21 +4,21 @@ import { getPost, posts } from "@/lib/blog";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
-    const post = getPost(params.slug);
-    if (!post) throw notFound();
-    return { post };
+    if (!getPost(params.slug)) throw notFound();
   },
-  head: ({ loaderData }) => ({
-    meta: loaderData
-      ? [
-          { title: `${loaderData.post.title} — Aruba Bob Blog` },
-          { name: "description", content: loaderData.post.excerpt },
-          { property: "og:title", content: loaderData.post.title },
-          { property: "og:description", content: loaderData.post.excerpt },
-          { property: "og:image", content: loaderData.post.image },
-        ]
-      : [],
-  }),
+  head: ({ params }) => {
+    const p = params?.slug ? getPost(params.slug) : undefined;
+    if (!p) return {};
+    return {
+      meta: [
+        { title: `${p.title} — Aruba Bob Blog` },
+        { name: "description", content: p.excerpt },
+        { property: "og:title", content: p.title },
+        { property: "og:description", content: p.excerpt },
+        { property: "og:image", content: p.image },
+      ],
+    };
+  },
   component: PostPage,
 });
 
