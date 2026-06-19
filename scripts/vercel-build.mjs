@@ -28,41 +28,48 @@ fs.writeFileSync(
   `import server from './server.js';
 
 export default async function handler(req, res) {
-  const proto = req.headers['x-forwarded-proto'] || 'https';
-  const host = req.headers['x-forwarded-host'] || req.headers.host || 'localhost';
-  const url = new URL(req.url, \`\${proto}://\${host}\`);
+  try {
+    const proto = req.headers['x-forwarded-proto'] || 'https';
+    const host = req.headers['x-forwarded-host'] || req.headers.host || 'localhost';
+    const url = new URL(req.url, \`\${proto}://\${host}\`);
 
-  const chunks = [];
-  for await (const chunk of req) chunks.push(chunk);
-  const body = chunks.length > 0 ? Buffer.concat(chunks) : null;
+    const chunks = [];
+    for await (const chunk of req) chunks.push(chunk);
+    const body = chunks.length > 0 ? Buffer.concat(chunks) : null;
 
-  const headers = new Headers();
-  for (const [k, v] of Object.entries(req.headers)) {
-    if (v == null) continue;
-    for (const val of Array.isArray(v) ? v : [v]) headers.append(k, val);
-  }
-
-  const noBody = req.method === 'GET' || req.method === 'HEAD';
-  const request = new Request(url.toString(), {
-    method: req.method,
-    headers,
-    body: noBody ? undefined : body,
-  });
-
-  const response = await server.fetch(request, {}, {});
-
-  res.statusCode = response.status;
-  for (const [k, v] of response.headers.entries()) res.setHeader(k, v);
-
-  if (response.body) {
-    const reader = response.body.getReader();
-    for (;;) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      res.write(value);
+    const headers = new Headers();
+    for (const [k, v] of Object.entries(req.headers)) {
+      if (v == null) continue;
+      for (const val of Array.isArray(v) ? v : [v]) headers.append(k, val);
     }
+
+    const noBody = req.method === 'GET' || req.method === 'HEAD';
+    const request = new Request(url.toString(), {
+      method: req.method,
+      headers,
+      body: noBody ? undefined : body,
+    });
+
+    const response = await server.fetch(request, {}, {});
+
+    res.statusCode = response.status;
+    for (const [k, v] of response.headers.entries()) res.setHeader(k, v);
+
+    if (response.body) {
+      const reader = response.body.getReader();
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        res.write(value);
+      }
+    }
+    res.end();
+  } catch (err) {
+    console.error('Lambda handler error:', err);
+    res.statusCode = 500;
+    res.setHeader('content-type', 'text/plain');
+    res.end('Internal server error: ' + (err && err.message ? err.message : String(err)));
   }
-  res.end();
 }
 `
 );
