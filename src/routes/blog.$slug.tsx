@@ -23,7 +23,8 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function PostPage() {
-  const { post } = Route.useLoaderData();
+  const { slug } = Route.useParams();
+  const post = getPost(slug)!;
   const more = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
   return (
     <article className="pb-24">
