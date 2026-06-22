@@ -8,8 +8,12 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get domain config and save to file
         run: |
@@ -24,5 +28,5 @@ jobs:
           git config user.email "bot@ci.com"
           git config user.name "CI Bot"
           git add domain-info.json
-          git commit -m "chore: save domain DNS info [skip ci]" || echo "nothing to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/FloFlo32/sea-venture-flow.git HEAD:main
+          git diff --staged --quiet || git commit -m "chore: save domain DNS info [skip ci]"
+          git push
