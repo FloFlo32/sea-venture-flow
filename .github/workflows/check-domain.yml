@@ -11,4 +11,18 @@ jobs:
         run: |
           curl -s \
             -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
-            "https://api.vercel.com/v10/projects/sea-venture-flow/domains/arubabob.getyetti.com"
+            "https://api.vercel.com/v10/projects/sea-venture-flow/domains/arubabob.getyetti.com" \
+            | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+print('=== DOMAIN INFO ===')
+print('name:', d.get('name'))
+print('verified:', d.get('verified'))
+print('verification:', json.dumps(d.get('verification', []), indent=2))
+print('apexName:', d.get('apexName'))
+print('gitBranch:', d.get('gitBranch'))
+print('redirect:', d.get('redirect'))
+print()
+print('=== FULL RESPONSE ===')
+print(json.dumps(d, indent=2))
+"
