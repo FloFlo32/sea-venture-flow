@@ -1,7 +1,9 @@
 name: Check Domain DNS Records
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/check-domain.yml'
 
 jobs:
   check:
@@ -15,14 +17,8 @@ jobs:
             | python3 -c "
 import sys, json
 d = json.load(sys.stdin)
-print('=== DOMAIN INFO ===')
 print('name:', d.get('name'))
 print('verified:', d.get('verified'))
 print('verification:', json.dumps(d.get('verification', []), indent=2))
-print('apexName:', d.get('apexName'))
-print('gitBranch:', d.get('gitBranch'))
-print('redirect:', d.get('redirect'))
-print()
-print('=== FULL RESPONSE ===')
-print(json.dumps(d, indent=2))
+print('FULL:', json.dumps(d, indent=2))
 "
