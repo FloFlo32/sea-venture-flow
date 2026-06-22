@@ -1,0 +1,37 @@
+name: Check Vercel Account
+
+on:
+  push:
+    paths:
+      - '.github/workflows/check-vercel-account.yml'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get Vercel account info
+        run: |
+          echo "=== USER ===" > vercel-account.json
+          curl -s -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            "https://api.vercel.com/v2/user" >> vercel-account.json
+          echo "" >> vercel-account.json
+          echo "=== TEAMS ===" >> vercel-account.json
+          curl -s -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            "https://api.vercel.com/v2/teams" >> vercel-account.json
+          echo "" >> vercel-account.json
+          echo "=== PROJECTS ===" >> vercel-account.json
+          curl -s -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            "https://api.vercel.com/v9/projects" >> vercel-account.json
+          cat vercel-account.json
+
+      - name: Commit
+        run: |
+          git config user.email "bot@ci.com"
+          git config user.name "CI Bot"
+          git add vercel-account.json
+          git diff --staged --quiet || git commit -m "chore: vercel account info [skip ci]"
+          git push
