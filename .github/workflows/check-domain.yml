@@ -12,21 +12,19 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get domain config and save to file
+      - name: Check domain verification status
         run: |
           curl -s \
             -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
-            "https://api.vercel.com/v10/projects/sea-venture-flow/domains/arubabob.getyetti.com" \
+            "https://api.vercel.com/v10/projects/sea-venture-flow/domains/arubabob.getyetti.com?teamId=team_nP2qlORT0fbwV4sh5pdRbXiJ" \
             > domain-info.json
           cat domain-info.json
 
-      - name: Commit domain info back to repo
+      - name: Commit
         run: |
           git config user.email "bot@ci.com"
           git config user.name "CI Bot"
           git add domain-info.json
-          git diff --staged --quiet || git commit -m "chore: save domain DNS info [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: domain status check [skip ci]"
           git push
