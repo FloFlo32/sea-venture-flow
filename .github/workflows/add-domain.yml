@@ -1,0 +1,26 @@
+name: Add Custom Domain to Vercel
+
+on:
+  workflow_dispatch:
+
+jobs:
+  add-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Vercel Project ID
+        id: get-project
+        run: |
+          PROJECT=$(curl -s -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            "https://api.vercel.com/v9/projects/sea-venture-flow")
+          PROJECT_ID=$(echo "$PROJECT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))")
+          echo "PROJECT_ID=$PROJECT_ID" >> $GITHUB_ENV
+          echo "Project ID: $PROJECT_ID"
+
+      - name: Add custom domain
+        run: |
+          RESULT=$(curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            "https://api.vercel.com/v10/projects/sea-venture-flow/domains" \
+            -d '{"name":"arubabob.getyetti.com"}')
+          echo "$RESULT"
