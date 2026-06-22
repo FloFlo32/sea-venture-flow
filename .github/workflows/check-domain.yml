@@ -1,0 +1,14 @@
+name: Check Domain DNS Records
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get domain config from Vercel
+        run: |
+          curl -s \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            "https://api.vercel.com/v10/projects/sea-venture-flow/domains/arubabob.getyetti.com"
