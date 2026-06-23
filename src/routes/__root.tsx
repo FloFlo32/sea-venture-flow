@@ -13,6 +13,7 @@ import { reportError } from "../lib/error-reporting";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { AIChatWidget } from "@/components/AIChatWidget";
 
 function NotFoundComponent() {
   return (
@@ -115,6 +116,7 @@ function RootComponent() {
         </main>
         <SiteFooter />
         <WhatsAppFloat />
+        <AIChatWidget />
       </div>
     </QueryClientProvider>
   );

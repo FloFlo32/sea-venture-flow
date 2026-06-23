@@ -28,7 +28,8 @@ export default defineConfig({
   environments: {
     ssr: {
       resolve: {
-        noExternal: true,
+        // In production bundle everything for the Edge Function; in dev let Node resolve CJS natively
+        noExternal: process.env.NODE_ENV === 'production' ? true : [],
       },
       build: {
         rollupOptions: {

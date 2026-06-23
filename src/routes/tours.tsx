@@ -18,6 +18,7 @@ const cats: { id: TourCategory | "all"; label: string }[] = [
   { id: "snorkel", label: "Snorkel" },
   { id: "scuba", label: "Scuba" },
   { id: "cruise", label: "Cruise" },
+  { id: "certification", label: "Certification" },
 ];
 
 function ToursPage() {

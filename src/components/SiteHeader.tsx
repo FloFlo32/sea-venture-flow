@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { SITE, whatsappLink } from "@/lib/site";
+import logo from "@/assets/Logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -19,7 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 bg-ocean-deep border-b border-white/10 text-white">
       <div className="container-tight flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center">
-          <img src="/logo.svg" alt="Aruba Bob" className="h-10 md:h-12 w-auto brightness-0 invert" />
+          <img src={logo} alt="Aruba Bob" className="h-10 md:h-12 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">

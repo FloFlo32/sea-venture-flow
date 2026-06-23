@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const featured = tours.slice(0, 4);
+  const featured = tours;
   return (
     <>
       {/* HERO */}
@@ -69,16 +69,11 @@ function Home() {
       {/* FEATURED TOURS */}
       <section className="py-20 md:py-28">
         <div className="container-tight">
-          <div className="flex items-end justify-between gap-4 mb-10">
-            <div>
-              <p className="text-primary font-medium text-sm">Featured Tours</p>
-              <h2 className="font-display font-bold text-3xl md:text-5xl mt-2">Pick your adventure</h2>
-            </div>
-            <Link to="/tours" className="text-primary font-semibold hidden sm:inline-flex items-center gap-1 hover:gap-2 transition-all">
-              View all <ArrowRight className="w-4 h-4" />
-            </Link>
+          <div className="mb-10">
+            <p className="text-primary font-medium text-sm">All Adventures</p>
+            <h2 className="font-display font-bold text-3xl md:text-5xl mt-2">Pick your adventure</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.map((t) => <TourCard key={t.slug} tour={t} />)}
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Instagram, MessageCircle } from "lucide-react";
 import { SITE, whatsappLink } from "@/lib/site";
+import logo from "@/assets/Logo.png";
 
 export function SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export function SiteFooter() {
       <div className="container-tight py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <div>
-            <img src="/logo.svg" alt="Aruba Bob" className="h-12 w-auto brightness-0 invert" />
+            <img src={logo} alt="Aruba Bob" className="h-12 w-auto" />
           </div>
           <p className="mt-4 text-white/75 max-w-md leading-relaxed">
             Adventure with the locals. Snorkel, scuba and sea scooter tours powered by an Aruban
