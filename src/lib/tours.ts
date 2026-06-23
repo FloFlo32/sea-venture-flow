@@ -37,18 +37,18 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 412,
     shortDescription:
-      "A fully private snorkeling experience at Mangel Halto - sea scooter, all gear, 100+ photos, and your own personal guide.",
+      "A fully private snorkeling experience at Mangel Halto: sea scooter, all gear, 100+ photos, and your own personal guide.",
     longDescription:
-      "Enjoy a fully private snorkeling tour at beautiful Mangel Halto. Glide over vibrant coral reefs on a solar-powered sea scooter with your personal Aruban guide. All gear is provided and you'll leave with over 100 professional photographs of your adventure. Perfect for couples, families, or anyone who wants the reef all to themselves. Alternative locations (Tres Trapi, Boca Catalina, Arashi) available at $150 - just email us.",
+      "Enjoy a fully private snorkeling tour at beautiful Mangel Halto. Glide over vibrant coral reefs on a solar-powered sea scooter with your personal Aruban guide. All gear is provided and you'll leave with over 100 professional photographs of your adventure. Perfect for couples, families, or anyone who wants the reef all to themselves. Alternative locations (Tres Trapi, Boca Catalina, Arashi) available at $150. Just email us.",
     highlights: [
-      "Completely private - just your group",
+      "Completely private, just your group",
       "Solar-powered sea scooter included",
       "Over 100 professional photos",
       "Alternative locations available",
     ],
     included: ["Sea scooter", "Mask, snorkel, wetsuit, boots & fins", "Professional guide", "100+ photographs"],
     notIncluded: ["Transportation to meeting point", "Gratuities"],
-    schedule: "Daily - contact us to book your time",
+    schedule: "Daily. Contact us to book your time.",
     image: snorkel,
     gallery: [snorkel, scooter, boat],
   },
@@ -62,7 +62,7 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 387,
     shortDescription:
-      "Snorkel over Aruba's most beautiful reef at Mangel Halto on a solar sea scooter - all gear and 100+ photos included.",
+      "Snorkel over Aruba's most beautiful reef at Mangel Halto on a solar sea scooter, all gear and 100+ photos included.",
     longDescription:
       "Join our group snorkel tour at Mangel Halto, one of Aruba's most stunning snorkel spots. Powered by solar sea scooters, you'll effortlessly glide over colorful coral reefs teeming with tropical fish. Our trained local guides lead the way, and you'll leave with over 100 professional photographs of your underwater adventure. Minimum age 10 years old.",
     highlights: [
@@ -87,7 +87,7 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 214,
     shortDescription:
-      "Watch the sun dip below the horizon then snorkel Mangel Halto after dark - sea scooter and underwater flashlight included.",
+      "Watch the sun dip below the horizon then snorkel Mangel Halto after dark, sea scooter and underwater flashlight included.",
     longDescription:
       "Start at sunset and snorkel into the night at magical Mangel Halto. This unique tour begins as golden light fades over the Caribbean and continues as the reef transforms under the beam of your underwater flashlight. Sea scooters, all gear, and an expert guide make this an unforgettable twilight experience unlike anything else in Aruba.",
     highlights: [
@@ -98,7 +98,7 @@ export const tours: Tour[] = [
     ],
     included: ["Sea scooter", "Underwater flashlight", "Mask, snorkel, wetsuit, boots & fins", "Professional guide"],
     notIncluded: ["Transportation to meeting point", "Gratuities"],
-    schedule: "Evening departures - contact us for times",
+    schedule: "Evening departures. Contact us for times.",
     image: night,
     gallery: [night, snorkel, scooter],
   },
@@ -112,9 +112,9 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 287,
     shortDescription:
-      "Try scuba diving for the first time - a safe, relaxed introduction with PADI-certified instructors, no experience needed.",
+      "Try scuba diving for the first time: a safe, relaxed introduction with PADI-certified instructors, no experience needed.",
     longDescription:
-      "We introduce snorkelers to scuba diving every day with our PADI Discover Scuba Diving program. No previous scuba experience is needed - this is a safe and relaxed way to try scuba diving for the first time at your own pace. Our certified instructors walk you through the basics, gear, and safety before your first underwater breath. Perhaps you'll fall in love with scuba and want to get PADI Certified - we do that too! Note: wait at least 24 hours after diving before flying.",
+      "We introduce snorkelers to scuba diving every day with our PADI Discover Scuba Diving program. No previous scuba experience is needed. This is a safe and relaxed way to try scuba diving for the first time at your own pace. Our certified instructors walk you through the basics, gear, and safety before your first underwater breath. Perhaps you'll fall in love with scuba and want to get PADI Certified, we do that too! Note: wait at least 24 hours after diving before flying.",
     highlights: [
       "No prior experience required",
       "PADI-certified instructors",
@@ -141,7 +141,7 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 176,
     shortDescription:
-      "A guided shore dive with full equipment, a professional dive leader, and your choice of dive location - single or double tank.",
+      "A guided shore dive with full equipment, a professional dive leader, and your choice of dive location, single or double tank.",
     longDescription:
       "Our shore dive puts you in the water with a professional dive leader and complete equipment at a location customized to your experience level and interests. Choose a single tank ($100) or double tank ($160) option. Photography and video services are available, and our guides know the best local sites for marine life, wrecks, and coral. Certified divers only.",
     highlights: [
@@ -156,7 +156,7 @@ export const tours: Tour[] = [
       "Photography/video services",
     ],
     notIncluded: ["Transportation", "Gratuities"],
-    schedule: "Daily - contact us to schedule",
+    schedule: "Daily. Contact us to schedule.",
     image: scuba,
     gallery: [scuba, dsd, boat],
   },
@@ -170,9 +170,9 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 92,
     shortDescription:
-      "Octopus, lobsters, moray eels, sleeping fish - a completely different underwater world comes alive after dark.",
+      "Octopus, lobsters, moray eels, sleeping fish, a completely different underwater world comes alive after dark.",
     longDescription:
-      "If you've never done a night dive, do it - and do it with Aruba Bob. Our night dive at Mangel Halto reveals octopus, sleeping fish, crabs, lobsters, moray eels and so much more. It feels like entering a completely different world. We take the time to make sure you're comfortable and confident before getting in. One tank shore dive with all diving equipment and a professional dive leader included. Certified divers only.",
+      "If you've never done a night dive, do it, and do it with Aruba Bob. Our night dive at Mangel Halto reveals octopus, sleeping fish, crabs, lobsters, moray eels and so much more. It feels like entering a completely different world. We take the time to make sure you're comfortable and confident before getting in. One tank shore dive with all diving equipment and a professional dive leader included. Certified divers only.",
     highlights: [
       "Incredible nocturnal marine life",
       "Dive flashlight included",
@@ -202,7 +202,7 @@ export const tours: Tour[] = [
     shortDescription:
       "Certified divers explore Aruba's best dive sites by boat with a professional dive leader, all gear, drinks and snacks included.",
     longDescription:
-      "Jump aboard for a guided boat dive to Aruba's most spectacular underwater sites. Ideal for newly certified and experienced certified divers, this tour pairs you with a professional dive leader who selects the best sites for conditions and marine life. All diving equipment, beverages, snacks, and professional photography are included. Dive sites are customizable - arrange through the shop or via email.",
+      "Jump aboard for a guided boat dive to Aruba's most spectacular underwater sites. Ideal for newly certified and experienced certified divers, this tour pairs you with a professional dive leader who selects the best sites for conditions and marine life. All diving equipment, beverages, snacks, and professional photography are included. Dive sites are customizable. Arrange through the shop or via email.",
     highlights: [
       "Best Aruba dive sites by boat",
       "For certified divers of all levels",
@@ -230,7 +230,7 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 64,
     shortDescription:
-      "Two-tank boat dive at thoughtfully selected Aruba sites - premium service, full gear, drinks, snacks and photo/video included.",
+      "Two-tank boat dive at thoughtfully selected Aruba sites, premium service, full gear, drinks, snacks and photo/video included.",
     longDescription:
       "The VIP Boat Dive is the ultimate two-tank diving experience in Aruba. Our team selects the finest dive sites and pairs you with an expert dive leader for deeper ocean exploration. All equipment, beverages, snacks, and photo/video services are included. Dive sites are discussed and arranged with the shop or via email to match your experience and wish list. Certified divers only.",
     highlights: [
@@ -247,7 +247,7 @@ export const tours: Tour[] = [
       "Photo & video services",
     ],
     notIncluded: ["Transportation to dock", "Gratuities"],
-    schedule: "Book any day - contact us",
+    schedule: "Book any day. Contact us.",
     image: boat,
     gallery: [boat, scuba, night],
   },
@@ -261,9 +261,9 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 143,
     shortDescription:
-      "Scenic boat ride to Sea Glass Island, shoreline exploration for sea glass, and snorkeling at Isla de Oro - all in one trip.",
+      "Scenic boat ride to Sea Glass Island, shoreline exploration for sea glass, and snorkeling at Isla de Oro, all in one trip.",
     longDescription:
-      "Set sail on a scenic boat ride to Sea Glass Island and spend time exploring the shoreline hunting for naturally polished sea glass - a unique Aruba keepsake. Then snorkel the crystal waters of Isla de Oro, where colorful coral reefs, tropical fish and fascinating marine species await. A relaxed, fun adventure for all ages.",
+      "Set sail on a scenic boat ride to Sea Glass Island and spend time exploring the shoreline hunting for naturally polished sea glass, a unique Aruba keepsake. Then snorkel the crystal waters of Isla de Oro, where colorful coral reefs, tropical fish and fascinating marine species await. A relaxed, fun adventure for all ages.",
     highlights: [
       "Boat ride to Sea Glass Island",
       "Shoreline sea glass hunting",
@@ -272,7 +272,7 @@ export const tours: Tour[] = [
     ],
     included: ["Scenic boat ride", "Sea glass exploration", "Snorkeling at Isla de Oro", "Guide"],
     notIncluded: ["Snorkel gear (available on request)", "Transportation", "Gratuities"],
-    schedule: "Daily - contact us to book",
+    schedule: "Daily. Contact us to book.",
     image: snorkel,
     gallery: [snorkel, boat, scooter],
   },
@@ -286,9 +286,9 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 118,
     shortDescription:
-      "Dive with a DPV sea scooter and cover more reef in less time - 1 or 2 tank options, full gear and photos included.",
+      "Dive with a DPV sea scooter and cover more reef in less time, 1 or 2 tank options, full gear and photos included.",
     longDescription:
-      "Take your dive to the next level with a Diver Propulsion Vehicle (DPV) sea scooter. Cover more ground, reach more sites, and experience the reef from a completely different angle. Choose a 1-tank ($120) or 2-tank ($200) dive. All equipment - including the DPV, complete dive gear, and photo/video services - is included along with a professional dive leader. Personalized service throughout. Certified divers only.",
+      "Take your dive to the next level with a Diver Propulsion Vehicle (DPV) sea scooter. Cover more ground, reach more sites, and experience the reef from a completely different angle. Choose a 1-tank ($120) or 2-tank ($200) dive. All equipment, including the DPV, complete dive gear, and photo/video services, is included along with a professional dive leader. Personalized service throughout. Certified divers only.",
     highlights: [
       "DPV sea scooter powered diving",
       "1 or 2 tank options",
@@ -302,7 +302,7 @@ export const tours: Tour[] = [
       "Photos & videos",
     ],
     notIncluded: ["Transportation", "Gratuities"],
-    schedule: "Daily - contact us to schedule",
+    schedule: "Daily. Contact us to schedule.",
     image: scooter,
     gallery: [scooter, scuba, boat],
   },
@@ -316,9 +316,9 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 71,
     shortDescription:
-      "Get PADI certified in Aruba - Open Water, Advanced, Rescue or Dive Master courses with experienced local instructors.",
+      "Get PADI certified in Aruba: Open Water, Advanced, Rescue or Dive Master courses with experienced local instructors.",
     longDescription:
-      "Become a PADI-certified diver with the Aruba Bob team. We offer Open Water ($550), Advanced ($490), Rescue ($525) and Dive Master ($1,200) certification courses. Each course runs 4–5 days with approximately 2.5 hours of instruction per day. Complete equipment, professional instruction, complimentary beverages and snacks, and photo/video documentation are all included. Start any day - your journey to becoming a certified diver starts here.",
+      "Become a PADI-certified diver with the Aruba Bob team. We offer Open Water ($550), Advanced ($490), Rescue ($525) and Dive Master ($1,200) certification courses. Each course runs 4–5 days with approximately 2.5 hours of instruction per day. Complete equipment, professional instruction, complimentary beverages and snacks, and photo/video documentation are all included. Start any day. Your journey to becoming a certified diver starts here.",
     highlights: [
       "Open Water, Advanced, Rescue & Dive Master levels",
       "Internationally recognized PADI certification",
@@ -347,9 +347,9 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviews: 38,
     shortDescription:
-      "Get certified to hunt invasive lionfish and help protect Aruba's coral reefs - 3-day program, all equipment and photos included.",
+      "Get certified to hunt invasive lionfish and help protect Aruba's coral reefs, a 3-day program with all equipment and photos included.",
     longDescription:
-      "The ALFI Lionfish Hunting Certification is a 3-day program that trains certified divers to safely and responsibly hunt invasive lionfish - a critical conservation effort for Aruba's coral reef ecosystem. You'll learn lionfish biology, their impact on the local marine environment, and safe spearfishing techniques. All equipment, professional instruction, photos, video documentation, and beverages and snacks are included.",
+      "The ALFI Lionfish Hunting Certification is a 3-day program that trains certified divers to safely and responsibly hunt invasive lionfish, a critical conservation effort for Aruba's coral reef ecosystem. You'll learn lionfish biology, their impact on the local marine environment, and safe spearfishing techniques. All equipment, professional instruction, photos, video documentation, and beverages and snacks are included.",
     highlights: [
       "Learn lionfish biology & ecosystem impact",
       "Safe hunting & removal techniques",
@@ -363,7 +363,7 @@ export const tours: Tour[] = [
       "Beverages & snacks",
     ],
     notIncluded: ["Transportation", "Gratuities"],
-    schedule: "3-day program - contact us to start",
+    schedule: "3-day program. Contact us to start.",
     image: scuba,
     gallery: [scuba, night, boat],
   },
