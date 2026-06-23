@@ -16,14 +16,14 @@ const nav = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 backdrop-blur bg-background/85 border-b border-border/60">
+    <header className="sticky top-0 z-40 bg-ocean-deep border-b border-white/10 text-white">
       <div className="container-tight flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg md:text-xl">
-          <span className="grid place-items-center w-9 h-9 rounded-full bg-[var(--gradient-ocean)] text-primary-foreground">
+          <span className="grid place-items-center w-9 h-9 rounded-full bg-white/15">
             <Anchor className="w-5 h-5" />
           </span>
           <span>
-            Aruba <span className="text-primary">Bob</span>
+            Aruba Bob
           </span>
         </Link>
 
@@ -34,7 +34,7 @@ export function SiteHeader() {
               to={n.to}
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: n.to === "/" }}
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-white/80 hover:text-white transition-colors"
             >
               {n.label}
             </Link>
@@ -44,7 +44,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <a
             href={SITE.phoneHref}
-            className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-ocean-deep hover:text-primary"
+            className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white"
             aria-label={`Call ${SITE.phone}`}
           >
             <Phone className="w-4 h-4" />
@@ -75,14 +75,14 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border/60 bg-background">
+        <div className="lg:hidden border-t border-white/10 bg-ocean-deep">
           <div className="container-tight py-4 flex flex-col gap-1">
             {nav.map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="py-2 px-2 rounded-md hover:bg-muted text-foreground/90"
+                className="py-2 px-2 rounded-md hover:bg-white/10 text-white/90"
               >
                 {n.label}
               </Link>
