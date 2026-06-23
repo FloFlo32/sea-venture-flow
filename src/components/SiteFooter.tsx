@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, Instagram, MessageCircle, Anchor } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, MessageCircle } from "lucide-react";
 import { SITE, whatsappLink } from "@/lib/site";
 
 export function SiteFooter() {
@@ -7,11 +7,8 @@ export function SiteFooter() {
     <footer className="mt-24 bg-ocean-deep text-white">
       <div className="container-tight py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2 font-display font-bold text-xl">
-            <span className="grid place-items-center w-9 h-9 rounded-full bg-white/15">
-              <Anchor className="w-5 h-5" />
-            </span>
-            Aruba Bob
+          <div>
+            <img src="/logo.svg" alt="Aruba Bob" className="h-12 w-auto brightness-0 invert" />
           </div>
           <p className="mt-4 text-white/75 max-w-md leading-relaxed">
             Adventure with the locals. Snorkel, scuba and sea scooter tours powered by an Aruban

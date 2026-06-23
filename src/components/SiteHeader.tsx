@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, MessageCircle, Menu, X, Anchor } from "lucide-react";
+import { Phone, MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { SITE, whatsappLink } from "@/lib/site";
 
@@ -18,13 +18,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-ocean-deep border-b border-white/10 text-white">
       <div className="container-tight flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg md:text-xl">
-          <span className="grid place-items-center w-9 h-9 rounded-full bg-white/15">
-            <Anchor className="w-5 h-5" />
-          </span>
-          <span>
-            Aruba Bob
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src="/logo.svg" alt="Aruba Bob" className="h-10 md:h-12 w-auto brightness-0 invert" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
