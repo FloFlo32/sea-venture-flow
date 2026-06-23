@@ -5,7 +5,7 @@ import about from "@/assets/about-team.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Aruba Bob — Adventure with the Locals" },
+      { title: "About Aruba Bob - Adventure with the Locals" },
       { name: "description", content: "Aruba Bob is an Aruban-led snorkel and scuba team committed to your best experience and safety." },
     ],
   }),
@@ -26,7 +26,7 @@ function AboutPage() {
               Welcome to Aruba Bob, where we specialize in unforgettable scuba diving and snorkeling
               tours. Immerse yourself in the vibrant world of underwater exploration as we guide you
               through the crystal-clear waters of Aruba. Powered by solar sea scooters, our tours
-              offer more than just adventure — they embody a way of life.
+              offer more than just adventure - they embody a way of life.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Whether you're a beginner eager to discover scuba diving or a seasoned enthusiast,

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/tours/$slug")({
     if (!t) return {};
     return {
       meta: [
-        { title: `${t.title} — Aruba Bob` },
+        { title: `${t.title} - Aruba Bob` },
         { name: "description", content: t.shortDescription },
         { property: "og:title", content: t.title },
         { property: "og:description", content: t.shortDescription },

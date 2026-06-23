@@ -6,7 +6,7 @@ import { TourCard } from "@/components/TourCard";
 export const Route = createFileRoute("/tours")({
   head: () => ({
     meta: [
-      { title: "All Tours — Aruba Bob" },
+      { title: "All Tours - Aruba Bob" },
       { name: "description", content: "Browse all snorkel, scuba and sea scooter tours offered by Aruba Bob in Aruba." },
     ],
   }),

@@ -7,8 +7,8 @@ import { SITE, whatsappLink } from "@/lib/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Aruba Bob" },
-      { name: "description", content: "Get in touch with Aruba Bob — phone, WhatsApp, email, and contact form." },
+      { title: "Contact - Aruba Bob" },
+      { name: "description", content: "Get in touch with Aruba Bob - phone, WhatsApp, email, and contact form." },
     ],
   }),
   component: ContactPage,
@@ -92,7 +92,7 @@ function ContactPage() {
         <form onSubmit={submit} className="surface-card p-6 md:p-8">
           {sent ? (
             <div className="text-center py-12">
-              <div className="font-display font-bold text-2xl">Thanks — we got it!</div>
+              <div className="font-display font-bold text-2xl">Thanks - we got it!</div>
               <p className="text-muted-foreground mt-2">We'll reply within 24 hours.</p>
             </div>
           ) : (

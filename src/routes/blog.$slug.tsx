@@ -11,7 +11,7 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!p) return {};
     return {
       meta: [
-        { title: `${p.title} — Aruba Bob Blog` },
+        { title: `${p.title} - Aruba Bob Blog` },
         { name: "description", content: p.excerpt },
         { property: "og:title", content: p.title },
         { property: "og:description", content: p.excerpt },

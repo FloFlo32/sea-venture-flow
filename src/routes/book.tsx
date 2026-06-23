@@ -15,7 +15,7 @@ export const Route = createFileRoute("/book")({
   validateSearch: (s) => search.parse(s),
   head: () => ({
     meta: [
-      { title: "Book Your Tour — Aruba Bob" },
+      { title: "Book Your Tour - Aruba Bob" },
       { name: "description", content: "Book your snorkel, scuba or sea scooter tour with Aruba Bob in just a few steps." },
     ],
   }),

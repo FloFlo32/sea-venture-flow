@@ -12,7 +12,7 @@ const GREETING: Message = {
   id: "greeting",
   role: "assistant",
   content:
-    "Hey there! I'm the Aruba Bob assistant. Ask me anything — tour prices, what's included, how to book, or which tour is right for you. I'm here to help!",
+    "Hey there! I'm the Aruba Bob assistant. Ask me anything - tour prices, what's included, how to book, or which tour is right for you. I'm here to help!",
 };
 
 function TypingDots() {
@@ -177,7 +177,7 @@ export function AIChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Suggested prompts — only shown at start */}
+          {/* Suggested prompts - only shown at start */}
           {messages.length === 1 && (
             <div className="px-3 pb-2 flex flex-wrap gap-1.5" style={{ background: "var(--secondary)" }}>
               {[
