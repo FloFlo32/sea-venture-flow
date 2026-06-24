@@ -7,6 +7,7 @@ import logo from "@/assets/Logo.png";
 const nav = [
   { to: "/", label: "Home" },
   { to: "/tours", label: "Tours" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/about", label: "About" },
   { to: "/reviews", label: "Reviews" },
   { to: "/blog", label: "Blog" },
