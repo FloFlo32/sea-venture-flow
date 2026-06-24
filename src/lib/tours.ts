@@ -4,6 +4,26 @@ import dsd from "@/assets/tour-dsd.jpg";
 import boat from "@/assets/tour-boat.jpg";
 import night from "@/assets/tour-night.jpg";
 import scooter from "@/assets/tour-scooter.jpg";
+import ab01_04 from "@/assets/Arubabob01_04.jpg";
+import ab01_05 from "@/assets/Arubabob01_05.jpeg";
+import ab01_06 from "@/assets/Arubabob01_06.jpg";
+import ab01_07 from "@/assets/Arubabob01_07.jpeg";
+import ab01_08 from "@/assets/Arubabob01_08.jpg";
+import ab01_10 from "@/assets/Arubabob01_10.jpeg";
+import ab01_12 from "@/assets/Arubabob01_12.jpeg";
+import ab01_13 from "@/assets/Arubabob01_13.jpeg";
+import ab01_14 from "@/assets/Arubabob01_14.jpeg";
+import ab02_01 from "@/assets/Arubabob02_01.jpg";
+import ab02_02 from "@/assets/Arubabob02_02.jpg";
+import ab02_03 from "@/assets/Arubabob02_03.jpg";
+import ab02_04 from "@/assets/Arubabob02_04.jpg";
+import ab02_05 from "@/assets/Arubabob02_05.jpg";
+import ab02_07 from "@/assets/Arubabob02_07.jpeg";
+import ab02_08 from "@/assets/Arubabob02_08.jpg";
+import ab02_09 from "@/assets/Arubabob02_09.jpg";
+import ab02_10 from "@/assets/Arubabob02_10.jpeg";
+import ab02_13 from "@/assets/Arubabob02_13.jpeg";
+import aruba14 from "@/assets/aruba_14.jpg";
 
 export type TourCategory = "snorkel" | "scuba" | "cruise" | "certification";
 
@@ -50,7 +70,7 @@ export const tours: Tour[] = [
     notIncluded: ["Transportation to meeting point", "Gratuities"],
     schedule: "Daily. Contact us to book your time.",
     image: snorkel,
-    gallery: [snorkel, scooter, boat],
+    gallery: [snorkel, ab01_06, ab02_03],
   },
   {
     slug: "group-snorkel-tour",
@@ -74,8 +94,8 @@ export const tours: Tour[] = [
     included: ["Sea scooter", "Mask, snorkel, wetsuit, boots & fins", "Trained staff guidance", "100+ photographs"],
     notIncluded: ["Transportation to meeting point", "Gratuities"],
     schedule: "Daily, 9:00 AM & 1:00 PM",
-    image: snorkel,
-    gallery: [snorkel, scooter, boat],
+    image: ab01_05,
+    gallery: [ab01_05, snorkel, ab01_08],
   },
   {
     slug: "sunset-night-snorkel",
@@ -99,8 +119,8 @@ export const tours: Tour[] = [
     included: ["Sea scooter", "Underwater flashlight", "Mask, snorkel, wetsuit, boots & fins", "Professional guide"],
     notIncluded: ["Transportation to meeting point", "Gratuities"],
     schedule: "Evening departures. Contact us for times.",
-    image: night,
-    gallery: [night, snorkel, scooter],
+    image: aruba14,
+    gallery: [aruba14, night, ab01_04],
   },
   {
     slug: "padi-discover-scuba-diving",
@@ -129,7 +149,7 @@ export const tours: Tour[] = [
     notIncluded: ["Transportation", "Gratuities"],
     schedule: "Daily, 8:30 AM",
     image: dsd,
-    gallery: [dsd, scuba, boat],
+    gallery: [dsd, ab01_07, ab02_04],
   },
   {
     slug: "shore-dive",
@@ -158,7 +178,7 @@ export const tours: Tour[] = [
     notIncluded: ["Transportation", "Gratuities"],
     schedule: "Daily. Contact us to schedule.",
     image: scuba,
-    gallery: [scuba, dsd, boat],
+    gallery: [scuba, ab02_02, ab01_10],
   },
   {
     slug: "night-dive",
@@ -188,7 +208,7 @@ export const tours: Tour[] = [
     notIncluded: ["Transportation", "Gratuities"],
     schedule: "Tue · Thu · Sat, 6:30 PM",
     image: night,
-    gallery: [night, scuba, scooter],
+    gallery: [night, ab02_07, ab02_10],
   },
   {
     slug: "guided-boat-dive",
@@ -218,7 +238,7 @@ export const tours: Tour[] = [
     notIncluded: ["Transportation to dock", "Gratuities"],
     schedule: "Daily, 8:00 AM",
     image: boat,
-    gallery: [boat, scuba, scooter],
+    gallery: [boat, ab02_08, ab02_09],
   },
   {
     slug: "vip-boat-dive",
@@ -248,8 +268,8 @@ export const tours: Tour[] = [
     ],
     notIncluded: ["Transportation to dock", "Gratuities"],
     schedule: "Book any day. Contact us.",
-    image: boat,
-    gallery: [boat, scuba, night],
+    image: ab01_12,
+    gallery: [ab01_12, boat, ab02_04],
   },
   {
     slug: "sea-glass-adventure",
@@ -273,8 +293,8 @@ export const tours: Tour[] = [
     included: ["Scenic boat ride", "Sea glass exploration", "Snorkeling at Isla de Oro", "Guide"],
     notIncluded: ["Snorkel gear (available on request)", "Transportation", "Gratuities"],
     schedule: "Daily. Contact us to book.",
-    image: snorkel,
-    gallery: [snorkel, boat, scooter],
+    image: ab01_13,
+    gallery: [ab01_13, ab02_03, ab02_13],
   },
   {
     slug: "dpv-diving",
@@ -304,7 +324,7 @@ export const tours: Tour[] = [
     notIncluded: ["Transportation", "Gratuities"],
     schedule: "Daily. Contact us to schedule.",
     image: scooter,
-    gallery: [scooter, scuba, boat],
+    gallery: [scooter, ab02_01, ab01_06],
   },
   {
     slug: "padi-certification",
@@ -334,8 +354,8 @@ export const tours: Tour[] = [
     ],
     notIncluded: ["Transportation", "Gratuities"],
     schedule: "Start any day",
-    image: scuba,
-    gallery: [scuba, dsd, boat],
+    image: ab01_14,
+    gallery: [ab01_14, dsd, ab02_13],
   },
   {
     slug: "alfi-lionfish-certification",
@@ -364,8 +384,8 @@ export const tours: Tour[] = [
     ],
     notIncluded: ["Transportation", "Gratuities"],
     schedule: "3-day program. Contact us to start.",
-    image: scuba,
-    gallery: [scuba, night, boat],
+    image: ab02_05,
+    gallery: [ab02_05, ab01_13, ab02_02],
   },
 ];
 
